@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: lightgrey;
+}
+
+.container {
+    width: 100%;
+}
+
+.text-container {
+    max-width: 1500px;
+    width: 100%;
+    background-color: mistyrose;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 8px;
+    margin: 0 auto;
+}
+
+.text-block {
+    min-width: 300px;
+    width: calc(100%/3 - 64px);
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.text-block:nth-child(odd) {
+    background-color: peachpuff;
+    border: 2px solid orange;
+}
+
+.text-block:nth-child(even) {
+    background-color: azure;
+    border: 2px solid lightblue;
+}
+
+@media (min-width: 1500px) {
+    .text-block {
+        width: calc(100%/4 - 80px)
+    }
+}
